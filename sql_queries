@@ -4,4 +4,4 @@ select subject.name, AVG(marks) from subject join exam on exam.subject_id = subj
 
 2) MARKS IN THE LAST SUBJECT
 
-select student.name, marks from student join  exam on student.id = exam.student_id join marks.exam_id = exam.id where exam.subject_id = 5 order by exam.marks desc
+select student.name, marks, attemp_no from student join  exam on student.id = exam.student_id join marks on marks.exam_id = exam.id where exam.subject_id = 5 order by marks.attemp_no desc 
