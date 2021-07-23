@@ -1,0 +1,7 @@
+1) SUBJECT GOT MAXIMUM AVERAGE MARKS
+
+select subject.name, AVG(marks) from subject join exam on exam.subject_id = subject.id join marks on marks.exam_id = exam.id GROUP BY subject.id order by AVG(MARKS) desc limit 1
+
+2) MARKS IN THE LAST SUBJECT
+
+select student.name, marks from student join  exam on student.id = exam.student_id join marks.exam_id = exam.id where exam.subject_id = 5 order by exam.marks desc
